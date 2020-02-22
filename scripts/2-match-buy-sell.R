@@ -28,6 +28,9 @@ for( buyrow in 1:nrow(buy) ){
       buy = round( ibuy$total * match.amount / ibuy$size, 8 ),
       sell = round( isel$total * match.amount / isel$size, 8 ),
       
+      buy_units = round( ibuy$size * match.amount / ibuy$size, 8 ),
+      sell_units = round( isel$size * match.amount / isel$size, 8 ),
+      
       buy.id = ibuy$trade.id,
       sell.id = isel$trade.id
       
@@ -46,7 +49,7 @@ for( buyrow in 1:nrow(buy) ){
     rm( itx, sellrow, isel, ibuy )
     
     # if we are done, break.
-    if( buy$left[ buyrow] <= 0 ) break
+    if( buy$left[buyrow] <= 0 ) break
     
   }
   
