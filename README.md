@@ -1,6 +1,6 @@
 # coinbase-fill-summarize
 
-*This code is provided AS-IS and I make no guarantees as to its' accuracy or correctness.*
+*This code is provided AS-IS and I make no guarantees as to accuracy or correctness. I do not provide tax advice or support.*
 
 I use this R code to summarize my Coinbase transactions for tax purposes. It can be difficult to match purchases to sales so these scripts will do it for you.
 
