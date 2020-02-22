@@ -43,7 +43,7 @@ for( buyrow in 1:nrow(buy) ){
     
     tx = bind_rows( tx, itx )
     
-    rm( itx, sellrow )
+    rm( itx, sellrow, isel, ibuy )
     
     # if we are done, break.
     if( buy$left[ buyrow] <= 0 ) break
@@ -54,4 +54,4 @@ for( buyrow in 1:nrow(buy) ){
   
 }
 
-if( any( tx$buy.sym != tx$sell.sym ) ) stop( 'symbol' )
+if( any( tx$buy.sym != tx$sell.sym ) ) stop( 'symbol error E341' )
