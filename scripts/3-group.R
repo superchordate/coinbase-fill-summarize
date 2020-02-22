@@ -4,7 +4,4 @@ gtx = tx %>%
   summarize_at( vars(buy, sell), list(sum) ) %>% ungroup() %>%
   mutate_at( vars(buy, sell), list(round), 0 ) %>%
   arrange( buy.at ) %>%
-  mutate( profit = sell + buy ) 
-
-w( gtx, 'output/summary')
-
+  mutate( profit = sell + buy )

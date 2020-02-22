@@ -5,12 +5,14 @@ require(magrittr)
 require(purrr)
 require(lubridate)
 require(data.table)
-
+require(glue)
 library(dplyr)
 
-runfolder( 'functions' )
 runfolder( 'scripts' )
 
-foryear = 2019
+# write the output file.
+w( gtx, 'output/summary')
 
+# view current year.
+foryear = 2019
 gtx %>% ungroup() %>% mutate(buy.at = as.Date(buy.at)) %>% filter(year(sell.at)==foryear)
